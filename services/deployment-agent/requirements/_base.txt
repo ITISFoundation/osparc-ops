@@ -4,38 +4,81 @@
 #
 #    pip-compile --output-file=_base.txt _base.in
 #
-aiohttp==3.6.2
-async-timeout==3.0.1      # via aiohttp
+aiohttp==3.7.4
+    # via -r _base.in
+async-timeout==3.0.1
+    # via aiohttp
 attrs==17.4.0
-certifi==2019.11.28       # via requests
-chardet==3.0.4            # via aiohttp, requests
+    # via
+    #   -r _base.in
+    #   aiohttp
+    #   jsonschema
+    #   openapi-core
+certifi==2019.11.28
+    # via requests
+chardet==3.0.4
+    # via
+    #   aiohttp
+    #   requests
 docker==4.1.0
-idna-ssl==1.1.0           # via aiohttp
-idna==2.8                 # via idna-ssl, requests, yarl
-importlib-metadata==1.4.0  # via jsonschema
-isodate==0.6.0            # via openapi-core
-jsonschema==3.2.0         # via openapi-spec-validator
-lazy-object-proxy==1.4.3  # via openapi-core
-more-itertools==8.1.0     # via zipp
-multidict==4.7.4          # via aiohttp, yarl
+    # via -r _base.in
+idna==2.8
+    # via
+    #   requests
+    #   yarl
+isodate==0.6.0
+    # via openapi-core
+jsonschema==3.2.0
+    # via openapi-spec-validator
+lazy-object-proxy==1.4.3
+    # via openapi-core
+multidict==4.7.4
+    # via
+    #   aiohttp
+    #   yarl
 openapi-core==0.12.0
-openapi-spec-validator==0.2.8  # via openapi-core
+    # via -r _base.in
+openapi-spec-validator==0.2.8
+    # via openapi-core
 psycopg2-binary==2.8.4
+    # via -r _base.in
 ptvsd==4.3.2
-pyrsistent==0.15.7        # via jsonschema
-pyyaml==5.3               # via openapi-spec-validator, trafaret-config
-requests==2.22.0          # via docker
+    # via -r _base.in
+pyrsistent==0.15.7
+    # via jsonschema
+pyyaml==5.3
+    # via
+    #   openapi-spec-validator
+    #   trafaret-config
+requests==2.22.0
+    # via docker
 semantic-version==2.8.4
-six==1.13.0               # via docker, isodate, jsonschema, openapi-core, openapi-spec-validator, pyrsistent, tenacity, websocket-client
-strict-rfc3339==0.7       # via openapi-core
+    # via -r _base.in
+six==1.13.0
+    # via
+    #   docker
+    #   isodate
+    #   jsonschema
+    #   openapi-core
+    #   openapi-spec-validator
+    #   tenacity
+    #   websocket-client
+strict-rfc3339==0.7
+    # via openapi-core
 tenacity==6.0.0
+    # via -r _base.in
 trafaret-config==2.0.2
-trafaret==2.0.2           # via trafaret-config
-typing-extensions==3.7.4.1  # via aiohttp
-urllib3==1.25.7           # via requests
-websocket-client==0.57.0  # via docker
-yarl==1.4.2               # via aiohttp
-zipp==1.0.0               # via importlib-metadata
+    # via -r _base.in
+trafaret==2.0.2
+    # via trafaret-config
+typing-extensions==3.7.4.1
+    # via aiohttp
+urllib3==1.25.7
+    # via requests
+websocket-client==0.57.0
+    # via docker
+yarl==1.4.2
+    # via aiohttp
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
